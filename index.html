@@ -1,0 +1,193 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to FlexCode City</title>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link href="CSS/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link href="./MainpageStyle.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar">
+        <div class="nav-start">
+            <div class="brand">
+                <p>FlexCode</p>
+            </div>
+            <div class="pages">
+                <div class="ms-1 align-items-center">
+                    <a href="#">Page 1 <i class="bi bi-chevron-down" style="font-size:15px;"></i></a>
+                </div>
+                <div>
+                    <a href="#">Page 2  <i class="bi bi-chevron-down" style="font-size:15px;"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="nav-end ms-auto">
+            <div class="nav-item">
+                <a href="#">Redirect Page 1</a> 
+            </div>
+            <div class="nav-item">
+                <a href="#">Redirect Page 2</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="half-container">
+        <!--LEFT HALF-->
+        <div class="left-half">
+
+            <div id="login-slogan" class="text-start text-uppercase d-flex flex-column">
+                <div id="login-slogan-text" class="text-white">
+                    <p class="first-part"></p>
+                    <p class="second-part"></p>
+                </div>
+                <div class="button-container bottom-0 p-2 mt-auto" style="margin-bottom:180px;">
+                    <button id="slogan-button" class="btn btn-dark" onclick="toggleLoginSlogan()"> LOG IN</button>
+                </div>
+            </div>
+
+            <div class="left-half-card-container" style="display:none">
+                <div class="card  text-center">
+
+                    <div class="card-body">
+                        <div class="flex-column">
+                            <div class="brand d-flex">
+                                <div class="brand-logo">
+                                    <img src="./Images/logotopng.png" />
+
+                                </div>
+                                <div class="brand-name">
+                                    <img src="./Images/flexcode.png" />
+                                </div>
+                            </div>
+                            <div class="login">
+                                <div class="form-group mt-5">
+                                    <label for="username"><i class="bi bi-person-fill"></i></label>
+                                    <input class="form-control" type="text" name="username" id="username" placeholder="Username"
+                                           onfocus="this.placeholder=''" onblur="this.placeholder='Username'" required>
+                                </div>
+                                <div class="form-group mt-3">
+                                    <label for="password"><i class="bi bi-shield-lock"></i></label>
+                                    <input class="form-control" type="password" name="password" id="password" placeholder="Password"
+                                           onfocus="this.placeholder=''" onblur="this.placeholder='Password'" required>
+                                </div>
+                                <div class="form-group mt-3">
+                                    <button class="button-36" role="button"> LOG IN</button>
+                                </div>
+                                <div class="forgot-password-link mt-3">
+                                    <a href="#" id="forgot-password-link" class="">Password MIA? Click here and let the rescue mission begin!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer text-center justify-content-center">
+                        <ul class="list-inline m-2">
+                            <li class="list-inline-item">
+                                <a class="text-decoration-none" href="https://www.threads.net/" target="_blank"><i class="bi bi-threads"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="text-decoration-none" href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="text-decoration-none" href="https://www.twitter.com/" target="_blank"><i class="bi bi-twitter-x"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--RIGHT HALF-->
+        <div class="right-half">
+
+            <div id="register-slogan" class="text-start text-uppercase d-flex flex-column">
+
+                <div class="button-container top-0 p-2 " style="margin-top:180px;">
+                    <button id="register-slogan-button" class="btn btn-dark" onclick="toggleRegisterSlogan()"> REGISTER</button>
+                </div>
+                <div id="register-slogan-text" class="text-white  top-0 p-2 mt-5">
+                    <p class="register-first-part"></p>
+
+                    <p class="register-second-part"></p>
+                </div>
+
+            </div>
+
+
+            <div class="right-half-card-container" style="display:none">
+                <div class="card  text-center">
+                    <div class="card-body">
+                        <div class="flex-column">
+                            <div class="brand d-flex">
+                                <div class="brand-logo">
+                                    <img src="./Images/logotopng.png" />
+
+                                </div>
+                                <div class="brand-name">
+                                    <img src="./Images/flexcode.png" />
+                            
+                                </div>
+                            </div>
+                            <div class="register">
+                                <div class="form-group mt-4">
+                                    <label for="username"><i class="bi bi-person-fill"></i></label>
+                                    <input class="form-control" type="text" name="username" id="username" placeholder="Username"
+                                           onfocus="this.placeholder=''" onblur="this.placeholder='Username'" required>
+                                </div>
+                                <div class="form-group mt-3">
+                                    <label for="email"><i class="bi bi-envelope-fill"></i></label>
+                                    <input class="form-control" type="email" name="email" id="email" placeholder="E-mail"
+                                           onfocus="this.placeholder=''" onblur="this.placeholder='Email'" required>
+                                </div>
+                                <div class="form-group mt-3">
+                                    <label for="password"><i class="bi bi-shield-lock-fill"></i></label>
+                                    <input class="form-control" type="password" name="password" id="password" placeholder="Password"
+                                           onfocus="this.placeholder=''" onblur="this.placeholder='Password'" required>
+                                </div>
+                                <div class="form-group mt-3">
+                                    <label for="confirm-password"><i class="bi bi-shield-lock-fill"></i></label>
+                                    <input class="form-control" type="password" name="confirm-password" id="confirm-password"
+                                           placeholder="Confirm Password" onfocus="this.placeholder=''"
+                                           onblur="this.placeholder='Confirm Password'" required>
+                                </div>
+                                <div class="form-group mt-3">
+                                    <button class="button-36-dark" role="button">REGISTER</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="card-footer text-center justify-content-center">
+                        <ul class="list-inline m-2">
+                            <li class="list-inline-item">
+                                <a class="text-decoration-none" href="https://www.threads.net/" target="_blank"><i class="bi bi-threads"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="text-decoration-none" href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="text-decoration-none" href="https://www.twitter.com/" target="_blank"><i class="bi bi-twitter-x"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="MainPageJS.js" defer></script>
+
+</body>
+</html>
+
